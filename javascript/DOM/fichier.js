@@ -63,3 +63,31 @@ document.getElementById('aaron').onclick = function() {
 
 // exercice :
 // creer une image, faire en sorte de changer dimage, a chaque clic sur limage. Faire tourner les 5 images (a.jpg,b.jpg,c.jpg,d.jpg,e.jpg)
+function tournerImage() {
+  var exoImage = document.getElementById('exoImage');
+  var imageCourante = exoImage.getAttribute('src'); // me permet de recuperer la valeur de l'attribut visé
+  if(imageCourante === 'a.jpg') {
+    exoImage.setAttribute('src', 'b.jpg');
+  } else if (imageCourante === 'b.jpg')
+  {
+    exoImage.setAttribute('src', 'c.jpg');
+  } else if (imageCourante === 'c.jpg')
+  {
+    exoImage.setAttribute('src', 'd.jpeg');
+  } else if (imageCourante === 'd.jpeg')
+  {
+    exoImage.setAttribute('src', 'e.jpeg');
+  } else if (imageCourante === 'e.jpeg')
+  {
+    exoImage.setAttribute('src', 'f.jpg');
+  } else if (imageCourante === 'f.jpg')
+  {
+    exoImage.setAttribute('src', 'a.jpg');
+  }
+}
+
+document.getElementById('exoImage').onclick = function(){
+  tournerImage();
+};
+
+setInterval(tournerImage, 1000); // toute les 1 seconde, je fais tourner limage
