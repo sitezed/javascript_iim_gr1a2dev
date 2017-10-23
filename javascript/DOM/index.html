@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Document Object Model</title>
+  <style>
+    img {
+      height: 200px;
+      width: 300px;
+    }
+
+    div {
+      height: 200px;
+      width: 300px;
+      border: 3px solid slateblue;
+      margin-bottom: 30px;
+      margin-top: 30px;
+      position: relative;
+    }
+    .bleu {
+      background: blue;
+    }
+    .vert {
+      background: green;
+    }
+    .jaune {
+      background: yellow;
+    }
+    .marron {
+      background: brown;
+    }
+    .noir {
+      background: black;
+      color: white;
+      text-align: center;
+    }
+    label {
+      display: inline-block;
+      width: 100px;
+    }
+    input {
+      width: 100px;
+    }
+    label, input {
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+<!--
+Le DOM (Document Object Model), est un objet Javascript qui represente tout le navigateur et les elements HTML qui le constitue.
+C'est a dire, qu'avec le DOM, nous pouvons attrapper et manipuler chaque evenement du navigateur (clic de souris, survol de souris, scroll, appuie sur touche de clavier etc..), chaque element HTML (<h1>, <div>, <input>, etc...) en Javascript.
+-->
+
+<!--
+3 endroits pour ecrire du JS :
+-->
+<!-- 1 : dans un attribut d'evenement -->
+<h1 onclick="alert('JS ici !');">Clique ici</h1>
+<h2 onmouseenter="this.style.color='green';">Passe ta souris ici</h2>
+<div>
+  <img id="monImage" onclick="this.src='b.jpg';" src="a.jpg">
+</div>
+<button id="changerImage">Changer d'image</button>
+<script>
+  // 2 : ecriture de JS dans une balise script, ATTENTION, le JS doit se trouver APRES l'element sur lequel nous souhaitons agir
+  document.getElementById('changerImage').onclick = function() {
+    document.getElementById('monImage').src = 'c.jpg';
+    document.getElementById('monImage').style.border = '5px solid red';
+  };
+</script>
+<hr>
+<!-- 3 : ecrire du JS dans un fichier externe -->
+<div class="marron" id="clement"></div>
+<div class="jaune"></div>
+<div class="jaune"></div>
+<div class="jaune"></div>
+<button id="smallJaune">Petit Jaune</button>
+<button id="smallAllJaune">Retrecir tous les jaunes</button>
+<hr>
+<div class="jaune" id="aaron"></div>
+<script src="fichier.js"></script>
+<hr style="margin-top:1000px;">
+
+
+</body>
+</html>
