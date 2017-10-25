@@ -134,3 +134,33 @@ if(10 < 20 == false) {
   document.write('Je ne rentre PAS dans la condition IF, je rentre dans le ELSE');
   document.write('10 est BIEN inferieur a 20');
 }
+
+let personnage = 'Gon FREECSS';
+
+if(personnage == 'Kirua ZOLDIG') {
+  document.write('<p>Il s\'agit bien de Kirua ZOLDIG</p>');
+} else if (personnage == 'Gon FREECSS') {
+  document.write('<p>non c\'est Gon</p>');
+} else if (personnage == 'Kurapika') {
+  document.write('<p>non c\'est Kurapika</p>');
+} else {
+  document.write('<p>Ce n\'est personne</p>');
+}
+
+// equivalent en switch case
+switch(personnage) {
+  case 'Kirua ZOLDIG' :
+    document.write('<p>Il s\'agit bien de Kirua ZOLDIG</p>');
+    break;
+  case 'Gon FREECSS' :
+    document.write('<p>non c\'est Gon</p>');
+    break;
+  case 'Kurapika' :
+    document.write('<p>non c\'est Kurapika</p>');
+    break;
+  default :
+    document.write('<p>Ce n\'est personne</p>');
+}
+// ATTENTION, switch case verifie la valeur ET le type
+if('10' == 10){} // ICI nous verifions QUE la valeur, donc la reponse est OUI
+if('10' === 10){} // ICI nous verifions la valeur ET le type, donc la rpeonse est NON
