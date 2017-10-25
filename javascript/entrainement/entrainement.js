@@ -212,3 +212,19 @@ if( !(10 < 5) ) {
   // si n'est pas 10 inferieur a 5
   document.write('<p>C\'est OUI, 10 n\'est pas inferieur a 5</p>');
 }
+
+// les boucles
+document.write('<h2>Les boucles</h2>');
+// la boucle do while
+
+let i = 11;
+do {
+  document.write('<p>Intruction pour DO WHILE</p>');
+} while( i < 10 );
+
+// la boucle while
+while( i < 10 ) {
+  document.write('<p>Intruction pour WHILE</p>');
+}
+
+// difference entre la DO WHILE et la WHILE :
