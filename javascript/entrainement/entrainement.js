@@ -293,8 +293,22 @@ const encoreFonction = function() {
 };
 encoreFonction();
 
-// autre syntaxe
+// autre syntaxe avec argument
 const maDerniereFonction = () => {
   ecris('Instructions de ma maDerniereFonction');
 };
 maDerniereFonction();
+
+// autre syntaxe avec argument
+const encoreDerniereFonction = x => {
+  // mon argument est X mais je peux choisir de ne pas l'utiliser dans mes instructions
+  ecris('Instructions de ma maDerniereFonction');
+};
+encoreDerniereFonction();
+
+// autre syntaxe avec argument
+const encoreDerniereFonctionAvecArgument = (x) => {
+  // mon argument est X mais je peux choisir de ne pas l'utiliser dans mes instructions
+  ecris('Instructions de ma maDerniereFonction');
+};
+encoreDerniereFonctionAvecArgument();
