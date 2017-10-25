@@ -11,7 +11,7 @@ Chapitres entrainement JS :
 - operateurs logiques
 - boucles (do while, while, for)
 - fonctions predefinie, fonctions utilisateur
-- les objets JS
+- les objets et les Arrays JS
 
 */
 
@@ -232,7 +232,69 @@ while( i < 10 ) {
 // La WHILE, verifie d'abord la condition avant d'executer l'instruction
 
 // boucle FOR
+// initialisation de la variable, condition de bouclage, incrementation
+// tant que i est inferieur 5, tu ajoutes 1 a i et tu executes les instructions
 for(let i=0; i < 5; i++) {
   // ce code s'executera 4 fois
   document.write('<p>Instruction pour FOR</p>');
 }
+
+// les fonctions
+document.write('<h2>Les fonctions</h2>');
+
+// Les fonctions predefinies en JAVASCRIPT
+let chiffreDix = '10';
+let chiffreVingt = '20';
+document.write('<p>'+ typeof chiffreDix +'</p>'); // string
+document.write('<p>'+ chiffreDix + chiffreVingt + '</p>'); // 1020
+
+
+chiffreDix = window.parseInt(chiffreDix); // jutilise la fonction predefinie parseInt() pour convertir le type string en type number
+chiffreVingt = window.parseInt(chiffreVingt); // jutilise la fonction predefinie parseInt() pour convertir le type string en type number
+document.write('<p>'+ typeof chiffreDix +'</p>'); // number
+document.write('<p>'+ typeof chiffreVingt +'</p>'); // number
+document.write('<p>'+ chiffreDix + chiffreVingt + '</p>'); // 30
+// fonction predefinie qui appartient a l'objet Math, et qui donne l'arrondie d'un nombre
+document.write(window.Math.round(5.6));
+
+// fonctions utilisateur
+// syntaxe la plus uilisee
+function maFonction () {
+  // instructions de la fonction
+}
+
+// cette fonction me permet d'ecrire des titres lorsque je l'execute
+// declaration de la fonction
+function titre(argument) {
+  document.write('<h2>'+ argument +'</h2>');
+}
+// execution de la fonction
+titre('Les fonctions usitlisateur');
+
+// declaration
+function ecris(argument) {
+  document.write('<p>'+ argument +'</p>');
+} // vous remarquerez l'ABSENCE DE POINT VIRGULE
+// execution
+ecris('Salut');
+
+// autre syntaxe pour declarer une fonction
+let monAutreFonction = function() {
+  // instructions de ma fonction
+  ecris('Instructions de ma fonction');
+}; // vous remarquerez le POINT VIRGULE
+// l'execution est la meme
+monAutreFonction();
+
+// autre syntaxe
+// utilisation avec const
+const encoreFonction = function() {
+  ecris('Instructions de ma encoreFonction');
+};
+encoreFonction();
+
+// autre syntaxe
+const maDerniereFonction = () => {
+  ecris('Instructions de ma maDerniereFonction');
+};
+maDerniereFonction();
