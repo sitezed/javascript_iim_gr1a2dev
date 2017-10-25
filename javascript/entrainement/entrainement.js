@@ -219,12 +219,20 @@ document.write('<h2>Les boucles</h2>');
 
 let i = 11;
 do {
-  document.write('<p>Intruction pour DO WHILE</p>');
+  document.write('<p>Instruction pour DO WHILE</p>');
 } while( i < 10 );
 
 // la boucle while
 while( i < 10 ) {
-  document.write('<p>Intruction pour WHILE</p>');
+  document.write('<p>Instruction pour WHILE</p>');
 }
 
 // difference entre la DO WHILE et la WHILE :
+// La DO WHILE, executera une premiere fois l'instruction ENSUITE verifie la condition pour continuer.
+// La WHILE, verifie d'abord la condition avant d'executer l'instruction
+
+// boucle FOR
+for(let i=0; i < 5; i++) {
+  // ce code s'executera 4 fois
+  document.write('<p>Instruction pour FOR</p>');
+}
