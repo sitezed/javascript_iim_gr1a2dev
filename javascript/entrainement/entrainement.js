@@ -162,5 +162,11 @@ switch(personnage) {
     document.write('<p>Ce n\'est personne</p>');
 }
 // ATTENTION, switch case verifie la valeur ET le type
-if('10' == 10){} // ICI nous verifions QUE la valeur, donc la reponse est OUI
-if('10' === 10){} // ICI nous verifions la valeur ET le type, donc la rpeonse est NON
+if('10' == 10){
+  document.write('<p>Les valeurs sont egales</p>');
+} // ICI nous verifions QUE la valeur, donc la reponse est OUI
+if('10' === 10){
+  document.write('<p>Les valeurs ET les types sont egaux</p>');
+} // ICI nous verifions la valeur ET le type, donc la reponse est NON
+
+// les operateurs logiques
