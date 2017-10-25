@@ -91,3 +91,35 @@ document.getElementById('exoImage').onclick = function(){
 };
 
 setInterval(tournerImage, 1000); // toute les 1 seconde, je fais tourner limage
+
+// exercice remplacer le fromage par le riz
+
+document.getElementById('changerCourse').onclick = function() {
+  console.log(document.getElementsByTagName('li')[3].innerHTML); // Fromage
+  document.getElementsByTagName('li')[3].innerHTML = 'Riz';
+};
+
+document.getElementById('lienGoogle').onclick = function(e) {
+  // le e correspond a levenement click, il represente levenement click
+  e.preventDefault(); // jannule le comportement a defaut du click, donc je ne vais pas sur la page de Google
+  alert('salut');
+  return false; // >> fais la meme chose que le e.preventDefault();
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
