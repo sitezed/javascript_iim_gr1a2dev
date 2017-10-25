@@ -194,3 +194,21 @@ a <= b  si a est inferieur ou egal a b
 a > b   si a est superieur a b
 a >= b  si a est superieur ou egal a b
 */
+
+if(10 < 5 || 20 > 10) {
+  // 10 < 5 OU 20 > 10
+  // si je rempli une seule des 2 conditions, ou les 2, alors je rentre ICI
+  document.write('<p>Au moins, une des 2 conditions est bien remplie</p>');
+}
+
+if( 10 < 5 && 20 > 10) {
+  // 10 < 5 ET 20 > 10
+  // je dois remplir les 2 conditions pour rentrer la dedans
+  document.write('<p>Les 2 conditions sont bien remplies</p>');
+}
+
+// equivaut a if( 10 < 5 == false )
+if( !(10 < 5) ) {
+  // si n'est pas 10 inferieur a 5
+  document.write('<p>C\'est OUI, 10 n\'est pas inferieur a 5</p>');
+}
