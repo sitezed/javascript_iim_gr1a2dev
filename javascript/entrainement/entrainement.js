@@ -169,4 +169,28 @@ if('10' === 10){
   document.write('<p>Les valeurs ET les types sont egaux</p>');
 } // ICI nous verifions la valeur ET le type, donc la reponse est NON
 
+// les conditions en ecriture ternaire
+// version normale
+let chiffreGauche = 5;
+let chiffreDroit = 10;
+if(chiffreGauche < chiffreDroit) {
+  document.write('<p>Nous remarquons que chiffreGauche est bien INFERIEUR a chiffreDroit</p>');
+} else {
+  document.write('<p>Nous remarquons que chiffreGauche est bien SUPERIEUR a chiffreDroit</p>');
+}
+
+// version ternaire
+document.write('<p>Nous remarquons que chiffreGauche est bien ' + ((chiffreGauche < chiffreDroit) ? 'INFERIEUR' : 'SUPERIEUR' ) + ' a chiffreDroit</p>');
+
 // les operateurs logiques
+document.write('<h2>les operateurs logiques</h2>');
+/*
+==      compare les valeurs (doivent etre egales)
+===     compare type et valeurs (doivent etre egaux)
+!=      difference de valeurs
+!==     difference de types valeurs
+a < b   si a est inferieur a b
+a <= b  si a est inferieur ou egal a b
+a > b   si a est superieur a b
+a >= b  si a est superieur ou egal a b
+*/
