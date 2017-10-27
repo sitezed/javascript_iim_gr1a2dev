@@ -312,3 +312,45 @@ const encoreDerniereFonctionAvecArgument = (x) => {
   ecris('Instructions de ma maDerniereFonction');
 };
 encoreDerniereFonctionAvecArgument();
+
+// les objets et les Arrays JS
+titre('les objets et les Arrays JS');
+
+/*
+En JS, il n'existe qu'un seul type de donnees, il s'agit des OBJETS.
+Lorsque qu'on dit qu'une variable est de type STRING ou NUMBER, en realite il s'agit de variable issues de l'objet STRING ou de l'objet NUMBER
+exemple :
+* */
+let phrase2 = 'Je Suis Une Phrase';
+// je veux passer cette phrase, entierement en minuscule
+// recherche dans la documentation, quelle est la methode (fonction) qui permet de faire ceci
+ecris(phrase2.length); // jaccede a la propriete length de l'objet STRING
+ecris(phrase2.toLowerCase());
+
+let monObjet = {
+  maMethode : function() {
+    // traitement de ma methode
+  }
+};
+// si je veux acceder a la methode de mon objet :
+monObjet.maMethode();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
