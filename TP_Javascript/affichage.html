@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head lang="fr">
+    <meta charset="UTF-8">
+    <title>Exercice Javascript</title>
+    <style>
+        table, td, th {
+            border: 2px solid green;
+            padding: 5px;
+            border-collapse: collapse;
+        }
+
+        table {
+            width: 420px;
+        }
+
+        tr {
+            padding: 5px;
+        }
+
+        input {
+            margin: 10px;
+            width: 200px;
+        }
+
+        div {
+            width: 700px;
+            margin: 10px auto;
+        }
+
+        label {
+            display: inline-block;
+            width: 200px;
+        }
+
+        div.move {
+            position: relative;
+            border: 2px solid;
+            background: green;
+            height: 100px;
+            width: 100px;
+            margin: 20px 0;
+        }
+
+        h2 {
+            margin: 20px 0;
+        }
+
+        #move1 {
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+<h2>Tableau de calcul</h2>
+
+<div>
+    <label for="nombre">Saisissez un nombre</label>
+    <input id="nombre" type="text">
+    <br>
+    <table>
+        <tr>
+            <th>nombre</th>
+            <th>carré</th>
+            <th>cube</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+</div>
+<hr>
+<h2>Copieur</h2>
+
+<div>
+    <label for="texte">Votre texte ici</label>
+    <input id="texte" type="text">
+    <br>
+    <label for="copie">La copie ici</label>
+    <input id="copie" type="text">
+</div>
+<hr>
+<h2>Déplacement carré</h2>
+
+<div>
+    <div class="move" id="move1"></div>
+</div>
+<button id="bouge">Bouge</button>
+<hr>
+<fieldset id="field">
+    <h2>Déplaçeur</h2>
+
+    <div class="move" id="move"></div>
+</fieldset>
+<script type="text/javascript" src="exercice.js"></script>
+</body>
+</html>
