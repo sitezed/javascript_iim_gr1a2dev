@@ -326,6 +326,16 @@ let phrase2 = 'Je Suis Une Phrase';
 // recherche dans la documentation, quelle est la methode (fonction) qui permet de faire ceci
 ecris(phrase2.length); // jaccede a la propriete length de l'objet STRING
 ecris(phrase2.toLowerCase());
+ecris(phrase2.substr(8, 10)); // 1er argument = point de depart, 2eme argument = nombre de caracteres
+ecris(phrase2.substring(8, 19)); // 1er argument = point de depart, 2eme argument = point d'arrivee
+
+String.prototype.mahamadou = function() {
+  ecris('J\'ecris ma methode');
+};
+phrase2.mahamadou();
+
+let phrase3 = 'autre chose';
+phrase3.mahamadou();
 
 let monObjet = {
   maMethode : function() {
@@ -334,6 +344,39 @@ let monObjet = {
 };
 // si je veux acceder a la methode de mon objet :
 monObjet.maMethode();
+
+// objet de type Array
+let monTableau = ['valeur 1', 'valeur 2', 'valeur 3']; // Array
+ecris(monTableau);
+monTableau.splice(1,1);
+ecris(monTableau);
+Array.prototype.spliceByValue = function(value) {
+  let index = this.indexOf(value);
+  if (index > -1) {
+    this.splice(index, 1);
+  }
+};
+monTableau.spliceByValue('valeur 3');
+ecris(monTableau);
+
+let autreTableau = ['ske jeveu', 'encore ske jveu', 'autre chose'];
+ecris(autreTableau);
+autreTableau.spliceByValue('encore ske jveu');
+ecris(autreTableau);
+
+let encoreObjet = {
+  propriete : 'valeur',
+  methode : function() {
+    // traitement
+  },
+  autreObjet : {
+    sousObjet : {
+      sousObjet : {
+
+      }
+    },
+  },
+};
 
 
 
